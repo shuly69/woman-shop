@@ -1,0 +1,136 @@
+<style>
+    .popup-phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 491px;
+  width: 100%;
+  min-height: 503px;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  &__form {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.02em;
+    border: none;
+    row-gap: 35px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  &__input {
+    max-height: 40px;
+    padding-bottom: 16px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+  }
+
+  &__button {
+    height: 68px;
+    color: $color-white;
+    font-size: 17px;
+    line-height: 138.9%;
+    background-color: #6e9c9f;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:hover {
+      background-color: #509498;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 32px;
+    right: 31.5px;
+    cursor: pointer;
+  }
+}
+
+.popup-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 600px;
+  width: 100%;
+  min-height: 278px;
+  padding-right: 5px;
+  padding-left: 5px;
+  letter-spacing: 0.02em;
+  row-gap: 35px;
+
+  &__title {
+    max-width: 460px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 140%;
+
+    @include margin-y(0, 0);
+  }
+
+  &__button {
+    max-width: 168px;
+    width: 100%;
+    height: 68px;
+    color: #6e9c9f;
+    font-size: 17px;
+    line-height: 138.9%;
+    background-color: $color-white;
+    border: 1px solid #6e9c9f;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:hover {
+      color: $color-white;
+      background-color: #6e9c9f;
+    }
+  }
+}
+</style>
+<article class="popup-phone">
+    <form class="popup-phone__form" action="">
+      <fieldset class="popup-phone__fieldset">
+        <legend class="popup-phone__title">Заказать обратный звонок</legend>
+        <input class="popup-phone__input" type="text" placeholder="Имя" />
+        <input class="popup-phone__input" type="email" placeholder="E-mail" />
+        <input
+          class="popup-phone__input"
+          type="phone"
+          placeholder="Телефон"
+        />
+        <button class="popup-phone__button" type="submit">
+          Заказать звонок
+        </button>
+      </fieldset>
+    </form>
+    <svg class="popup-phone__close" width="14.5px" height="14.5px">
+      <use xlink:href="img/sprite.svg#icon-popup-close"></use>
+    </svg>
+  </article>
+
+  <article class="popup-success">
+    <h3 class="popup-success__title">Отлично! Мы скоро вам перезвоним.</h3>
+    <button class="popup-success__button">Закрыть</button>
+  </article>
